@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="唐缝梁的学术主页。研究方向包括城市群韧性、交通公平与地理空间人工智能。">
+<meta name="description" content="唐缝梁的学术主页。研究方向包括城市群韧性、交通出行公平、洪涝灾害韧性与人工智能辅助城市规划。">
 <meta name="theme-color" content="#0b1020">
 <title>唐缝梁｜城市（群）韧性</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1020'/%3E%3Cpath d='M7 24V9h17m-12 7h10' fill='none' stroke='%23d7fa73' stroke-width='2'/%3E%3C/svg%3E">
@@ -156,6 +156,43 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 .timeline details>p{display:block!important;padding:2px 0 5px}.timeline details::details-content{content-visibility:visible!important;display:block!important;height:auto!important}
 .publications{background:white}.paper,.paper[hidden]{display:grid!important;grid-template-columns:33px 1fr auto;gap:6px;padding:4px 0;break-inside:avoid}.paper h3{font-size:9.5pt}.paper p{font-size:8pt}
 }
+.pub-stats{margin-bottom:29px;border:1px solid #b9cbc0;border-radius:10px;background:#f8faf4;overflow:hidden}
+.stats-head{display:flex;align-items:end;justify-content:space-between;gap:14px;padding:23px 24px 18px}
+.stats-head .mono{color:#326b57}.stats-head .mono span{margin-left:7px}
+.stats-head h3{margin-top:5px;font:650 clamp(1.3rem,2.55vw,2rem)/1.24 var(--display)}
+.stats-head>p,.stats-note{font-size:.8rem;color:var(--muted)}
+.stats-totals{display:grid;grid-template-columns:repeat(3,1fr);margin:0;border-block:1px solid #c7d5c9;background:#eef4ea}
+.stats-totals>div{display:grid;gap:5px;padding:13px 23px}
+.stats-totals>div+div{border-left:1px solid #c7d5c9}
+.stats-totals dt{font-size:.83rem;color:#36594d}
+.stats-totals dd{margin:0;color:#173e32;font:400 clamp(1.85rem,4vw,2.9rem)/1 Georgia,serif;font-variant-numeric:tabular-nums}
+.stats-body{display:grid;grid-template-columns:1.22fr 1fr;gap:0}
+.stats-chart{min-width:0;background:#122335;color:#d4e6e6;padding:18px 16px 11px}
+.stats-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
+.stats-tabs button{min-height:33px;padding:3px 7px;border:1px solid #597080;border-radius:3px;background:#182e42;color:#e2edf1;font-size:.74rem}
+.stats-tabs button[aria-pressed=true]{background:#cfe9a1;border-color:#cfe9a1;color:#1b2b29}
+.stats-plot{display:grid;grid-template-columns:22px 1fr;gap:6px}
+.stats-axis{display:flex;flex-direction:column;justify-content:space-between;margin-bottom:27px;padding:16px 0 4px;text-align:right;font:.65rem var(--mono);color:#bed1df}
+.stats-bars{display:grid;grid-auto-columns:minmax(0,1fr);grid-auto-flow:column;min-height:184px;background:repeating-linear-gradient(to top,#8198ad3d 0 1px,transparent 1px 33.33%) 0 16px/100% calc(100% - 43px) no-repeat}
+.stats-bar{display:grid;grid-template-rows:1fr 27px;min-width:0;min-height:184px;border:0;padding:16px 2px 0;background:none;color:#dbe9ed}
+.stats-bar:hover,.stats-bar[aria-pressed=true]{background:#b0e1d51a;color:#fff}
+.stats-bar-track{position:relative;align-self:stretch;border-bottom:1px solid #8198ad69}
+.stats-bar-fill{position:absolute;left:50%;bottom:0;translate:-50% 0;width:clamp(13px,58%,39px);height:var(--bar,0%);background:#9bd5bf;border-radius:4px 4px 0 0;transition:height .28s ease,background .18s}
+.stats-bar:hover .stats-bar-fill,.stats-bar[aria-pressed=true] .stats-bar-fill{background:#ddf19c}
+.stats-bar-value{position:absolute;left:50%;bottom:calc(var(--bar,0%) + 3px);translate:-50% 0;transition:bottom .28s ease}
+.stats-bar-value,.stats-bar-year{font:650 .7rem/1.2 var(--mono);font-variant-numeric:tabular-nums}
+.stats-bar-year{align-self:center}
+.stats-table-wrap{padding:13px 19px;min-width:0;overflow-x:auto}
+.stats-table{width:100%;border-collapse:collapse;font-size:.77rem;text-align:right;font-variant-numeric:tabular-nums}
+.stats-table caption{text-align:left;padding:2px 0 9px;color:#36594d;font-weight:650}
+.stats-table th,.stats-table td{padding:6px 3px;border-bottom:1px solid #d9e3d7}
+.stats-table th:first-child{text-align:left}
+.stats-table thead th{color:#49665b}
+.stats-table tr.is-selected{background:#e1edd8}
+.stats-note{padding:11px 20px;border-top:1px solid #c7d5c9}
+@media(max-width:820px){.stats-body{grid-template-columns:1fr}.stats-head{display:block}.stats-head>p{margin-top:7px}}
+@media(max-width:440px){.stats-head{padding:16px 13px}.stats-totals>div{padding:9px 8px}.stats-totals dt{font-size:.72rem}.stats-chart{padding-inline:8px}.stats-table-wrap{padding-inline:12px}.stats-table{font-size:.69rem}.stats-note{padding-inline:12px}}
+@media print{.pub-stats{display:none!important}}
 </style>
 </head>
 <body>
@@ -170,8 +207,8 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <div>
 <p class="kicker mono"><span lang="zh-CN" class="locale">学术主页 / 城乡规划</span><span lang="en" class="locale">Academic portfolio / Urban planning</span></p>
 <h1 id="name"><span lang="zh-CN" class="locale">唐缝梁</span><span lang="en" class="locale">Fengliang <em>Tang</em></span></h1>
-<p class="subname mono"><span lang="zh-CN" class="locale">Fengliang Tang · 城市韧性与 GeoAI</span><span lang="en" class="locale">唐缝梁 · Urban resilience &amp; GeoAI</span></p>
-<p class="lead"><span lang="zh-CN" class="locale">我关注城市如何应对洪涝、街道与邻里环境如何影响共享出行机会，以及如何用地理空间人工智能解释这些差异。</span><span lang="en" class="locale">I study how cities withstand floods, how neighborhoods shape access to shared mobility, and how geospatial AI can explain these differences.</span></p>
+<p class="subname mono"><span lang="zh-CN" class="locale">Fengliang Tang · 城市（群）韧性</span><span lang="en" class="locale">唐缝梁 · Urban and regional resilience</span></p>
+<p class="lead"><span lang="zh-CN" class="locale">我关注城市（群）作为复杂巨系统中的韧性议题，包括但不限于系统韧性评估、交通出行公平、洪涝灾害韧性等。</span><span lang="en" class="locale">My research examines resilience in cities and urban agglomerations as complex systems, including system resilience assessment, mobility equity, and flood resilience.</span></p>
 <div class="buttons"><a class="cta primary" href="#featured"><span lang="zh-CN" class="locale">探索洪涝韧性平台</span><span lang="en" class="locale">Explore the dashboard</span> <span aria-hidden="true">↓</span></a><a class="cta" href="#cv"><span lang="zh-CN" class="locale">查看学术简历</span><span lang="en" class="locale">Explore my CV</span> <span aria-hidden="true">↗</span></a></div>
 </div>
 <figure class="atlas" data-mode="resilience">
@@ -211,7 +248,7 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <div class="atlas-controls" role="group" aria-label="研究图谱图层" data-en-label="Research atlas layers" hidden>
 <button type="button" data-topic="resilience" aria-pressed="true"><small>01</small> <span lang="zh-CN" class="locale">区域韧性</span><span lang="en" class="locale">Resilience</span></button>
 <button type="button" data-topic="mobility" aria-pressed="false"><small>02</small> <span lang="zh-CN" class="locale">出行公平</span><span lang="en" class="locale">Mobility</span></button>
-<button type="button" data-topic="geoai" aria-pressed="false"><small>03</small> GeoAI</button>
+<button type="button" data-topic="geoai" aria-pressed="false"><small>03</small> <span lang="zh-CN" class="locale">规划AI+</span><span lang="en" class="locale">Planning AI+</span></button>
 </div>
 </div>
 <figcaption class="figcap mono"><span id="atlas-caption"><span lang="zh-CN" class="locale">地形与洪涝暴露</span><span lang="en" class="locale">Terrain and flood exposure</span></span><span><span lang="zh-CN" class="locale">概念示意</span><span lang="en" class="locale">Concept illustration</span></span></figcaption>
@@ -220,7 +257,7 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <div class="scale"><div class="wrap">
 <a href="#project-resilience" data-jump="resilience"><b>01</b> <span lang="zh-CN" class="locale">区域尺度 · 城市群韧性</span><span lang="en" class="locale">Region · Urban resilience</span></a>
 <a href="#project-mobility" data-jump="mobility"><b>02</b> <span lang="zh-CN" class="locale">网络尺度 · 出行公平</span><span lang="en" class="locale">Network · Mobility equity</span></a>
-<a href="#project-geoai" data-jump="geoai"><b>03</b> <span lang="zh-CN" class="locale">街道尺度 · GeoAI</span><span lang="en" class="locale">Street · GeoAI</span></a>
+<a href="#project-geoai" data-jump="geoai"><b>03</b> <span lang="zh-CN" class="locale">规划AI+</span><span lang="en" class="locale">Planning AI+</span></a>
 </div></div>
 <section class="section featured" id="featured" aria-labelledby="featured-title"><div class="wrap">
 <div class="section-head">
@@ -247,19 +284,52 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <div class="research-nav" role="group" aria-label="研究主题" data-en-label="Research themes" hidden>
 <button type="button" data-topic="resilience" aria-pressed="true" aria-controls="project-resilience"><span>01</span><span lang="zh-CN" class="locale">城市与区域韧性</span><span lang="en" class="locale">Urban &amp; regional resilience</span><span aria-hidden="true">↗</span></button>
 <button type="button" data-topic="mobility" aria-pressed="false" aria-controls="project-mobility"><span>02</span><span lang="zh-CN" class="locale">出行与空间公平</span><span lang="en" class="locale">Mobility &amp; spatial equity</span><span aria-hidden="true">↗</span></button>
-<button type="button" data-topic="geoai" aria-pressed="false" aria-controls="project-geoai"><span>03</span><span lang="zh-CN" class="locale">GeoAI 与城市感知</span><span lang="en" class="locale">GeoAI &amp; urban perception</span><span aria-hidden="true">↗</span></button>
+<button type="button" data-topic="geoai" aria-pressed="false" aria-controls="project-geoai"><span>03</span><span lang="zh-CN" class="locale">AI赋能城市规划</span><span lang="en" class="locale">AI for Urban Planning</span><span aria-hidden="true">↗</span></button>
 </div>
 <div>
 <article class="project" id="project-resilience" data-topic="resilience"><p class="mono">01 / Region</p><h3><span lang="zh-CN" class="locale">京津冀城市群韧性</span><span lang="en" class="locale">Resilience in Beijing–Tianjin–Hebei</span></h3><p><span lang="zh-CN" class="locale">结合多源地理数据与空间建模，评估洪涝风险、识别协同恢复的重点地区，并追踪区域生态韧性的时空演变。</span><span lang="en" class="locale">I use multi-source geospatial data and spatial modeling to assess flood risk, identify priorities for coordinated recovery, and trace changes in regional ecological resilience.</span></p><a href="https://doi.org/10.1016/j.uclim.2025.102436"><span lang="zh-CN" class="locale">阅读生态韧性论文</span><span lang="en" class="locale">Read the ecological resilience paper</span> ↗</a></article>
 <article class="project" id="project-mobility" data-topic="mobility"><p class="mono">02 / Network</p><h3><span lang="zh-CN" class="locale">共享出行与交通公平</span><span lang="en" class="locale">Shared mobility and transport equity</span></h3><p><span lang="zh-CN" class="locale">结合共享单车骑行记录、街景与轨道站域数据，研究建成环境如何影响不同社区的出行机会。</span><span lang="en" class="locale">I combine bike-share trips, street imagery, and metro catchment data to examine how the built environment shapes travel opportunities across neighborhoods.</span></p><a href="https://doi.org/10.1016/j.tbs.2026.101284"><span lang="zh-CN" class="locale">阅读共享出行论文</span><span lang="en" class="locale">Read the shared mobility paper</span> ↗</a></article>
-<article class="project" id="project-geoai" data-topic="geoai"><p class="mono">03 / Street</p><h3><span lang="zh-CN" class="locale">街景计算与城市感知</span><span lang="en" class="locale">Street-view analytics and urban perception</span></h3><p><span lang="zh-CN" class="locale">用街景影像、遥感指标和可解释建模量化街道环境，并将分析结果用于街道空间评估和更新研究。</span><span lang="en" class="locale">I combine street-view imagery, satellite-derived indicators, and interpretable models to assess street environments and study their regeneration.</span></p><a href="https://doi.org/10.3390/rs16193661"><span lang="zh-CN" class="locale">阅读街景分析论文</span><span lang="en" class="locale">Read the street-view paper</span> ↗</a></article>
+<article class="project" id="project-geoai" data-topic="geoai"><p class="mono">03 / Planning AI+</p><h3><span lang="zh-CN" class="locale">AI赋能城市规划</span><span lang="en" class="locale">AI for Urban Planning</span></h3><p><span lang="zh-CN" class="locale">结合街景影像、遥感数据与可解释机器学习，分析城市空间环境，为街道更新与规划决策提供依据。</span><span lang="en" class="locale">I combine street-view imagery, remote sensing data, and interpretable machine learning to assess urban environments and inform street regeneration and planning decisions.</span></p><a href="https://doi.org/10.3390/rs16193661"><span lang="zh-CN" class="locale">阅读街景分析论文</span><span lang="en" class="locale">Read the street-view paper</span> ↗</a></article>
 </div></div></div></section>
 <section class="section publications" id="publications"><div class="wrap">
 <div class="section-head"><div><p class="label mono">03 / <span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></p><h2><span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></h2></div><p><span lang="zh-CN" class="locale">期刊论文、会议论文与报告按年份倒序排列。可按年份筛选，或搜索题名、期刊和 DOI。</span><span lang="en" class="locale">Journal articles, conference papers, and reports in reverse chronological order. Filter by year or search titles, venues, and DOIs.</span></p></div>
+<section class="pub-stats" id="publication-stats" aria-labelledby="stats-title" hidden>
+  <div class="stats-head">
+    <div><p class="mono"><span lang="zh-CN" class="locale">发表概览</span><span lang="en" class="locale">Publication overview</span> <span id="stats-period"></span></p><h3 id="stats-title"><span lang="zh-CN" class="locale">年度发表与作者角色</span><span lang="en" class="locale">Publication trends and authorship</span></h3></div>
+    <p><span lang="zh-CN" class="locale">点击年份柱可联动下方成果列表。</span><span lang="en" class="locale">Select a year in the chart to filter the publication list.</span></p>
+  </div>
+  <dl class="stats-totals">
+    <div><dt><span lang="zh-CN" class="locale">论文总数</span><span lang="en" class="locale">Total papers</span></dt><dd data-total="annual"></dd></div>
+    <div><dt><span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></dt><dd data-total="first"></dd></div>
+    <div><dt><span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding author</span></dt><dd data-total="corresponding"></dd></div>
+  </dl>
+  <div class="stats-body">
+    <div class="stats-chart">
+      <div class="stats-tabs" role="group" aria-label="图表指标" data-en-label="Chart metric">
+        <button type="button" data-metric="annual" aria-pressed="true"><span lang="zh-CN" class="locale">年度篇数</span><span lang="en" class="locale">Annual</span></button>
+        <button type="button" data-metric="cumulative" aria-pressed="false"><span lang="zh-CN" class="locale">累计篇数</span><span lang="en" class="locale">Cumulative</span></button>
+        <button type="button" data-metric="first" aria-pressed="false"><span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></button>
+        <button type="button" data-metric="corresponding" aria-pressed="false"><span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding</span></button>
+      </div>
+      <div class="stats-plot">
+        <div class="stats-axis" aria-hidden="true"><span id="stats-scale"></span><span>0</span></div>
+        <div class="stats-bars" id="stats-bars"></div>
+      </div>
+    </div>
+    <div class="stats-table-wrap">
+      <table class="stats-table">
+        <caption><span lang="zh-CN" class="locale">年度明细 · 篇</span><span lang="en" class="locale">Annual breakdown · Papers</span></caption>
+        <thead><tr><th scope="col"><span lang="zh-CN" class="locale">年份</span><span lang="en" class="locale">Year</span></th><th scope="col"><span lang="zh-CN" class="locale">年度</span><span lang="en" class="locale">Annual</span></th><th scope="col"><span lang="zh-CN" class="locale">累计</span><span lang="en" class="locale">Cumulative</span></th><th scope="col"><span lang="zh-CN" class="locale">一作</span><span lang="en" class="locale">First</span></th><th scope="col"><span lang="zh-CN" class="locale">通讯</span><span lang="en" class="locale">Corresp.</span></th></tr></thead>
+        <tbody id="stats-table"></tbody>
+      </table>
+    </div>
+  </div>
+  <p class="stats-note"><span lang="zh-CN" class="locale">统计基于本站已收录的期刊与会议论文。通讯作者含共同通讯作者。</span><span lang="en" class="locale">Counts cover the journal articles and conference papers listed on this site. Corresponding authorship includes co-corresponding authors.</span></p>
+</section>
 <div class="filters" hidden>
 <div class="filter-row">
 <label><span lang="zh-CN" class="locale">检索成果</span><span lang="en" class="locale">Search publications</span><input id="query" type="search" placeholder="例如 Urban Climate、flood 或 DOI" data-en-placeholder="e.g. Urban Climate, flood, or a DOI"></label>
-<label><span lang="zh-CN" class="locale">发表年份</span><span lang="en" class="locale">Publication year</span><select id="year"><option value="all" data-en="All years">全部年份</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option></select></label>
+<label><span lang="zh-CN" class="locale">发表年份</span><span lang="en" class="locale">Publication year</span><select id="year"><option value="all" data-en="All years">全部年份</option></select></label>
 </div>
 <output id="publication-status" aria-live="polite"></output>
 </div>
@@ -304,8 +374,6 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <div><h3><span lang="zh-CN" class="locale">教育经历</span><span lang="en" class="locale">Education</span></h3><ol class="timeline">
 <li><details open><summary><time class="mono" datetime="2021-09"><span lang="zh-CN" class="locale">2021 年起</span><span lang="en" class="locale">Since 2021</span></time><span lang="zh-CN" class="locale">天津大学</span><span lang="en" class="locale">Tianjin University</span></summary><p><span lang="zh-CN" class="locale">建筑学院城乡规划系，资源与环境工程博士阶段研究。</span><span lang="en" class="locale">Doctoral research in Resources and Environment, School of Architecture.</span></p></details></li>
 <li><details><summary><span class="mono">2019–2020</span><span lang="zh-CN" class="locale">伦敦大学学院</span><span lang="en" class="locale">University College London</span></summary><p><span lang="zh-CN" class="locale">跨学科城市设计研究硕士。</span><span lang="en" class="locale">MRes in Inter-disciplinary Urban Design.</span></p></details></li>
-<li><details><summary><span class="mono">2017–2019</span><span lang="zh-CN" class="locale">利物浦大学</span><span lang="en" class="locale">University of Liverpool</span></summary><p><span lang="zh-CN" class="locale">城市更新与规划，本科阶段。</span><span lang="en" class="locale">Undergraduate study in Urban Regeneration and Planning.</span></p></details></li>
-<li><details><summary><span class="mono">2015–2017</span><span lang="zh-CN" class="locale">西交利物浦大学</span><span lang="en" class="locale">Xi’an Jiaotong–Liverpool University</span></summary><p><span lang="zh-CN" class="locale">城乡规划与设计，本科阶段。</span><span lang="en" class="locale">Undergraduate study in Urban Planning and Design.</span></p></details></li>
 </ol></div>
 <div class="service"><h3><span lang="zh-CN" class="locale">科研项目与学术服务</span><span lang="en" class="locale">Projects &amp; academic service</span></h3>
 <div><h4><span lang="zh-CN" class="locale">国家重点研发计划</span><span lang="en" class="locale">National Key R&amp;D Program of China</span></h4><p><span lang="zh-CN" class="locale">参与资源约束下城市（群）系统韧性功能协同恢复和提升技术研究。</span><span lang="en" class="locale">Project team member studying coordinated recovery and resilience in urban systems under resource constraints.</span></p></div>
@@ -344,7 +412,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const captions = {
   resilience: ['地形与洪涝暴露', 'Terrain and flood exposure'],
   mobility: ['出行网络与可达性', 'Mobility networks and access'],
-  geoai: ['街景采样与空间特征', 'Street-view sampling and spatial features']
+  geoai: ['空间数据与规划分析', 'Spatial data and planning analysis']
 };
 const topics = Object.keys(captions);
 let topic = 'resilience';
@@ -369,6 +437,81 @@ function displayTopic(next, animate = false) {
     }
   }
 }
+
+const stats = document.querySelector('.pub-stats');
+const chartBars = stats.querySelector('#stats-bars');
+const chartScale = stats.querySelector('#stats-scale');
+const metricButtons = [...stats.querySelectorAll('[data-metric]')];
+const metricNames = {
+  annual: ['年度篇数', 'Annual papers'],
+  cumulative: ['累计篇数', 'Cumulative papers'],
+  first: ['第一作者篇数', 'First-author papers'],
+  corresponding: ['通讯作者篇数', 'Corresponding-author papers']
+};
+let metric = 'annual';
+const annualCounts = new Map();
+for (const paper of papers) {
+  const date = paper.querySelector('time').dateTime;
+  if (!annualCounts.has(date)) annualCounts.set(date, {annual:0, first:0, corresponding:0});
+  if (paper.querySelector('.pub-kind [lang=en]')?.textContent.trim() === 'Blue book chapter') continue;
+  const role = paper.querySelector('p > .locale[lang=en]')?.textContent.trim();
+  const counts = annualCounts.get(date);
+  counts.annual++;
+  if (role === 'First author') counts.first++;
+  if (role === 'Corresponding author' || role === 'Co-corresponding author') counts.corresponding++;
+}
+const years = [...annualCounts.keys()].sort();
+for (const date of years.slice().reverse()) year.add(new Option(date, date));
+const statsRows = stats.querySelector('#stats-table');
+const total = {annual:0, first:0, corresponding:0};
+const yearStats = years.map(date => {
+  const counts = annualCounts.get(date);
+  for (const key of Object.keys(total)) total[key] += counts[key];
+  counts.cumulative = total.annual;
+  const bar = document.createElement('button');
+  bar.type = 'button';
+  bar.className = 'stats-bar';
+  bar.innerHTML = '<span class="stats-bar-track" aria-hidden="true"><span class="stats-bar-fill"></span><span class="stats-bar-value"></span></span><span class="stats-bar-year" aria-hidden="true"></span>';
+  bar.querySelector('.stats-bar-year').textContent = date;
+  bar.addEventListener('click', () => {
+    year.value = year.value === date ? 'all' : date;
+    resetPublicationPage();
+  });
+  chartBars.append(bar);
+  const row = statsRows.insertRow();
+  const heading = document.createElement('th');
+  heading.scope = 'row';
+  heading.textContent = date;
+  row.append(heading);
+  for (const key of Object.keys(metricNames)) row.insertCell().textContent = counts[key];
+  return {date, counts, bar, row};
+});
+stats.querySelector('#stats-period').textContent = years.length ? years[0] + '–' + years.at(-1) : '';
+for (const counter of stats.querySelectorAll('[data-total]')) counter.textContent = total[counter.dataset.total];
+stats.hidden = !years.length;
+
+function updateStats() {
+  const en = Number(root.lang === 'en');
+  const max = Math.max(1, ...yearStats.map(item => item.counts[metric]));
+  const axisStep = max > 15 ? 5 : max > 6 ? 2 : 1;
+  const scale = Math.ceil(max / axisStep) * axisStep;
+  chartScale.textContent = scale;
+  for (const button of metricButtons) button.setAttribute('aria-pressed', String(button.dataset.metric === metric));
+  for (const {date, counts, bar, row} of yearStats) {
+    const value = counts[metric];
+    const selected = year.value === date;
+    bar.querySelector('.stats-bar-value').textContent = value;
+    bar.style.setProperty('--bar', (value / scale * 100) + '%');
+    bar.setAttribute('aria-label', en ? date + ' · ' + metricNames[metric][en] + ': ' + value :
+      date + ' 年 · ' + metricNames[metric][en] + '：' + value);
+    bar.setAttribute('aria-pressed', String(selected));
+    row.classList.toggle('is-selected', selected);
+  }
+}
+for (const button of metricButtons) button.addEventListener('click', () => {
+  metric = button.dataset.metric;
+  updateStats();
+});
 
 const numberButtons = Array.from({length: Math.ceil(papers.length / pageSize)}, (_, index) => {
   const button = document.createElement('button');
@@ -395,6 +538,7 @@ function showPublications() {
   result.value = en ? (count ? range + ' of ' + count + ' results' : '0 results') :
     (count ? '显示 ' + range + ' 条，共 ' + count + ' 条' : '共 0 条');
   empty.hidden = count > 0;
+  updateStats();
   pagination.hidden = totalPages <= 1;
   previous.disabled = page === 1;
   next.disabled = page === totalPages;
@@ -420,9 +564,9 @@ const translated = [...document.querySelectorAll('[data-en-label],[data-en-place
 function applyLanguage() {
   const isEnglish = new URL(location.href).searchParams.get('lang') === 'en';
   root.lang = isEnglish ? 'en' : 'zh-CN';
-  document.title = isEnglish ? 'Fengliang Tang | Urban Resilience & GeoAI' : '唐缝梁｜城市韧性与 GeoAI';
-  description.content = isEnglish ? 'Fengliang Tang’s academic homepage for urban resilience, mobility equity and geospatial AI.' :
-    '唐缝梁的学术主页。研究方向包括城市群韧性、交通公平与地理空间人工智能。';
+  document.title = isEnglish ? 'Fengliang Tang | Urban and Regional Resilience' : '唐缝梁｜城市（群）韧性';
+  description.content = isEnglish ? 'Fengliang Tang’s academic homepage for urban and regional resilience, mobility equity, flood resilience, and AI for urban planning.' :
+    '唐缝梁的学术主页。研究方向包括城市群韧性、交通出行公平、洪涝灾害韧性与人工智能辅助城市规划。';
   for (const {element, attribute, zh, en} of translated) {
     if (attribute) element.setAttribute(attribute, isEnglish ? en : zh);
     else element.textContent = isEnglish ? en : zh;
