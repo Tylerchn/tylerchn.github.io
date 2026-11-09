@@ -8,7 +8,7 @@
 <title>唐缝梁｜城市韧性与 GeoAI</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1020'/%3E%3Cpath d='M7 24V9h17m-12 7h10' fill='none' stroke='%23d7fa73' stroke-width='2'/%3E%3C/svg%3E">
 <style>
-:root{color-scheme:light;--night:#0b1020;--panel:#121b2d;--paper:#f5f5ee;--ink:#192525;--muted:#4d605e;--line:#c9d2c5;--lime:#d8fa75;--mint:#a7f3e5;--blue:#aac1ff;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--display:"Songti SC","Noto Serif CJK SC","STSong","SimSun",Georgia,serif;--sans:system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
+:root{color-scheme:light;--night:#0b1020;--panel:#121b2d;--paper:#f7f6ef;--ink:#192525;--muted:#4d605e;--line:#c9d2c5;--lime:#d9ef9a;--mint:#a7f3e5;--blue:#aac1ff;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--display:"Songti SC","Noto Serif CJK SC","STSong","SimSun",Georgia,serif;--sans:system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
@@ -64,10 +64,10 @@ html[lang=en] .hero h1{white-space:normal;font:400 clamp(3.8rem,7.9vw,7.3rem)/.9
 .atlas-controls button[aria-pressed=true]{background:var(--scene);color:#101824;border-color:var(--scene)}
 .atlas-controls small{font:650 .64rem var(--mono)}
 .figcap{display:flex;justify-content:space-between;gap:10px;margin-top:10px;color:#adbdcb}
-.scale{color:#1b2b26;background:var(--lime)}
+.scale{color:#253a33;background:#e1eacf;border-bottom:1px solid #bfccb5}
 .scale .wrap{display:grid;grid-template-columns:1fr 1.1fr 1fr}
 .scale a{display:flex;align-items:center;gap:13px;padding:14px 12px;min-height:62px;text-decoration:none;font-size:.88rem;font-weight:650}
-.scale a+a{border-left:1px solid #b4cf67;padding-left:24px}
+.scale a+a{border-left:1px solid #b9c8ad;padding-left:24px}
 .scale a:hover{text-decoration:underline}.scale b{font:650 .7rem var(--mono)}
 .section{padding-block:88px;border-bottom:1px solid var(--line)}
 .section-head{display:flex;justify-content:space-between;align-items:end;gap:26px;margin-bottom:33px}
@@ -88,21 +88,19 @@ html[lang=en] .section-head h2{font-family:Georgia,serif}
 .project h3{margin:10px 0 12px;font:500 clamp(1.55rem,3vw,2.5rem)/1.18 var(--display)}
 .project p:not(.mono){max-width:62ch;color:#cbd9dd}
 .project a{display:inline-block;margin-top:19px;color:var(--lime);font-size:.86rem;font-weight:650}
-.publications{background:#e9eee5}
+.publications{background:#eaf0e7}
 .filters{display:grid;gap:12px;margin-bottom:19px}
 .filter-row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
-.filters button{min-height:40px;border:1px solid #a5baae;border-radius:4px;background:transparent;padding:7px 13px;font-size:.86rem}
-.filters button[aria-pressed=true]{background:#1b4237;border-color:#1b4237;color:#fff}
 .filters label{display:grid;gap:5px;font-size:.8rem;font-weight:650}
 .filters label:first-child{flex:1 1 240px}
 .filters input,.filters select{min-height:42px;padding:8px 11px;background:#fafbf6;border:1px solid #a5baae;border-radius:4px}
-.filters output{font-size:.8rem;color:var(--muted);margin-left:auto}
+.filters output{font:650 .78rem/1.4 var(--mono);color:#4b665a}
 .paper-list{list-style:none;margin:0;padding:0;border-top:1px solid #b8c6bc}
-.paper{display:grid;grid-template-columns:65px 1fr 64px;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid #b8c6bc}
+.paper{display:grid;grid-template-columns:65px 1fr 74px;gap:15px;align-items:baseline;padding:17px 12px;border-bottom:1px solid #bac9bf;transition:background .2s}
 .paper:hover{background:#ffffff70}
 .paper time,.paper a{color:#175c4e;font:650 .75rem var(--mono)}
-.paper a{justify-self:end}
-.paper h3{font-size:1rem;line-height:1.45;margin-bottom:4px}
+.paper a{justify-self:end;white-space:nowrap}
+.paper h3{font:650 1.03rem/1.38 Georgia,var(--sans);margin-bottom:5px;overflow-wrap:anywhere}.paper h3[lang=zh-CN]{font-family:var(--sans)}.paper cite{font-style:italic}
 .paper p{font-size:.83rem;color:var(--muted)}
 .empty{margin-top:18px;color:var(--muted)}
 .cv-grid{display:grid;grid-template-columns:1.25fr .8fr;gap:clamp(26px,6vw,80px)}
@@ -122,14 +120,33 @@ html[lang=en] .section-head h2{font-family:Georgia,serif}
 .foot{background:#0b1020;color:#c9d7dd}
 .foot .wrap{min-height:93px;padding-block:16px;flex-wrap:wrap}
 .foot nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.86rem}
+.featured{background:#fcfbf6}
+.featured .section-head h2{font-size:clamp(2.35rem,4.4vw,4.05rem)}
+.platform-frame{overflow:hidden;border:1px solid #354458;border-radius:12px;background:#111a2a;box-shadow:0 15px 35px #0c211823}
+.platform-bar{min-height:55px;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:9px 17px;background:#111a2a;color:#e3ece7;border-bottom:1px solid #39495b}
+.platform-status{display:flex;align-items:center;gap:10px;font-size:.84rem}
+.platform-status>span{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.platform-link{font-size:.8rem;color:var(--mint);font-weight:650;text-align:right;white-space:nowrap}
+.project-frame{display:block;width:100%;height:clamp(520px,64vw,710px);border:0;background:#10172a}
+.platform-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.platform-notes div{border-bottom:1px solid #c8d1c5;padding:9px 2px;font-weight:650}
+.platform-help{margin-top:12px;color:var(--muted);font-size:.78rem}
+.platform-notes .mono{margin-right:8px;color:#317360}
+.pub-kind{font-size:.73rem;color:#385b50;margin-left:9px}
+.pagination,.page-numbers{display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap}
+.pagination{margin-top:22px}
+.pagination button{min-width:39px;min-height:39px;padding:5px 9px;border:1px solid #98b1a4;border-radius:4px;background:#f8faf3;font-size:.83rem}
+.pagination button:hover:not(:disabled){border-color:#245747}
+.pagination button[aria-current=page]{background:#1b4237;color:#fff;border-color:#1b4237}
+.pagination button:disabled{cursor:default;opacity:.48}
 @media(max-width:930px){.wrap{width:calc(100% - 52px)}.hero-grid{min-height:530px;gap:22px}.section{padding-block:62px}}
-@media(max-width:700px){html{scroll-padding-top:110px}.wrap{width:calc(100% - 34px)}.top .wrap{gap:9px 15px;flex-wrap:wrap;padding-block:9px}.top nav{gap:14px}.top nav a{font-size:.79rem}.hero-grid,.research-layout,.cv-grid{grid-template-columns:1fr}.hero-grid{min-height:0;padding-block:39px 24px;gap:32px}.hero h1{font-size:clamp(4.05rem,14vw,6.2rem)}.atlas{width:100%}.scale a{font-size:.76rem;gap:4px;align-items:flex-start;flex-direction:column;padding:9px 4px;min-height:0}.scale a+a{padding-left:10px}.section{padding-block:48px}.section-head{display:block;margin-bottom:22px}.section-head>p{margin-top:12px}.research-nav button{padding:12px;min-height:50px}.project{min-height:0;padding:22px}.paper{grid-template-columns:39px 1fr 42px;gap:8px}.timeline summary{grid-template-columns:82px 1fr auto;gap:8px}.filters output{margin-left:0}}
+@media(max-width:700px){html{scroll-padding-top:110px}.wrap{width:calc(100% - 34px)}.top .wrap{gap:9px 15px;flex-wrap:wrap;padding-block:9px}.top nav{gap:12px;flex-wrap:wrap}.top nav a{font-size:.79rem}.hero-grid,.research-layout,.cv-grid{grid-template-columns:1fr}.hero-grid{min-height:0;padding-block:39px 24px;gap:32px}.hero h1{font-size:clamp(4.05rem,14vw,6.2rem)}.atlas{width:100%}.scale a{font-size:.76rem;gap:4px;align-items:flex-start;flex-direction:column;padding:9px 4px;min-height:0}.scale a+a{padding-left:10px}.section{padding-block:48px}.section-head{display:block;margin-bottom:22px}.section-head>p{margin-top:12px}.research-nav button{padding:12px;min-height:50px}.project{min-height:0;padding:22px}.paper{grid-template-columns:39px 1fr 43px;gap:8px;padding-inline:0}.paper h3{font-size:.95rem}.project-frame{height:620px}.platform-notes{gap:8px;font-size:.77rem}.platform-notes .mono{display:block}.timeline summary{grid-template-columns:82px 1fr auto;gap:8px}.filters output{margin-left:0}}
 @media(max-width:390px){.top nav{order:3;margin-left:0;width:100%;justify-content:space-between}.atlas-header{padding:10px 12px}.atlas-controls button{font-size:.7rem;gap:4px}.figcap{font-size:.62rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{
 @page{margin:15mm}
 body{background:white;color:#111;font-size:10pt}.wrap{width:100%}
-.top,.atlas,.kicker,.buttons,.scale,#research,.filters,.cv .cta,.foot,.skip,.empty{display:none!important}
+.top,.atlas,.kicker,.buttons,.scale,#research,.featured,.filters,.pagination,.cv .cta,.foot,.skip,.empty{display:none!important}
 main{display:flex;flex-direction:column}.hero{order:-3;background:white;color:#111}.cv{order:-2}
 .hero-grid,.section,.cv-grid{display:block;min-height:0;padding:0 0 13px;border:0}
 html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:none;margin:0}
@@ -145,7 +162,7 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <a class="skip" href="#main"><span lang="zh-CN" class="locale">跳到正文</span><span lang="en" class="locale">Skip to content</span></a>
 <header class="top" id="top"><div class="wrap">
 <a class="brand" href="#top"><span class="mark" aria-hidden="true">FT</span><span lang="zh-CN" class="locale">唐缝梁</span><span lang="en" class="locale">Fengliang Tang</span></a>
-<nav aria-label="主导航" data-en-label="Main navigation"> <a href="#research"><span lang="zh-CN" class="locale">研究方向</span><span lang="en" class="locale">Research</span></a><a href="#publications"><span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></a><a href="#cv"><span lang="zh-CN" class="locale">学术简历</span><span lang="en" class="locale">Academic CV</span></a></nav>
+<nav aria-label="主导航" data-en-label="Main navigation"> <a href="#featured"><span lang="zh-CN" class="locale">研究平台</span><span lang="en" class="locale">Dashboard</span></a><a href="#research"><span lang="zh-CN" class="locale">研究方向</span><span lang="en" class="locale">Research</span></a><a href="#publications"><span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></a><a href="#cv"><span lang="zh-CN" class="locale">学术简历</span><span lang="en" class="locale">Academic CV</span></a></nav>
 <button type="button" class="language" id="language" hidden><span aria-hidden="true">◎</span><span lang="zh-CN">中文</span><span lang="en">English</span></button>
 </div></header>
 <main id="main">
@@ -155,7 +172,7 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <h1 id="name"><span lang="zh-CN" class="locale">唐缝梁</span><span lang="en" class="locale">Fengliang <em>Tang</em></span></h1>
 <p class="subname mono"><span lang="zh-CN" class="locale">Fengliang Tang · 城市韧性与 GeoAI</span><span lang="en" class="locale">唐缝梁 · Urban resilience &amp; GeoAI</span></p>
 <p class="lead"><span lang="zh-CN" class="locale">我关注城市如何应对洪涝、街道与邻里环境如何影响共享出行机会，以及如何用地理空间人工智能解释这些差异。</span><span lang="en" class="locale">I study how cities withstand floods, how neighborhoods shape access to shared mobility, and how geospatial AI can explain these differences.</span></p>
-<div class="buttons"><a class="cta primary" href="#cv"><span lang="zh-CN" class="locale">查看学术简历</span><span lang="en" class="locale">Explore my CV</span> <span aria-hidden="true">↓</span></a><a class="cta" href="https://www.researchgate.net/profile/Fengliang_Tang2/research">ResearchGate <span aria-hidden="true">↗</span></a></div>
+<div class="buttons"><a class="cta primary" href="#featured"><span lang="zh-CN" class="locale">探索洪涝韧性平台</span><span lang="en" class="locale">Explore the dashboard</span> <span aria-hidden="true">↓</span></a><a class="cta" href="#cv"><span lang="zh-CN" class="locale">查看学术简历</span><span lang="en" class="locale">Explore my CV</span> <span aria-hidden="true">↗</span></a></div>
 </div>
 <figure class="atlas" data-mode="resilience">
 <div class="atlas-shell">
@@ -205,8 +222,27 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <a href="#project-mobility" data-jump="mobility"><b>02</b> <span lang="zh-CN" class="locale">网络尺度 · 出行公平</span><span lang="en" class="locale">Network · Mobility equity</span></a>
 <a href="#project-geoai" data-jump="geoai"><b>03</b> <span lang="zh-CN" class="locale">街道尺度 · GeoAI</span><span lang="en" class="locale">Street · GeoAI</span></a>
 </div></div>
+<section class="section featured" id="featured" aria-labelledby="featured-title"><div class="wrap">
+<div class="section-head">
+<div><p class="label mono">01 / <span lang="zh-CN" class="locale">研究平台</span><span lang="en" class="locale">Research platform</span></p><h2 id="featured-title"><span lang="zh-CN" class="locale">京津冀城市群<br>洪涝韧性监测平台</span><span lang="en" class="locale">Flood resilience in<br>Beijing–Tianjin–Hebei</span></h2></div>
+<p><span lang="zh-CN" class="locale">从区域韧性评估、洪涝风险诊断到灾后协同恢复，用交互地图和模拟结果串联三个研究环节。</span><span lang="en" class="locale">An interactive dashboard connecting regional resilience assessment, flood-risk diagnosis, and coordinated post-disaster recovery.</span></p>
+</div>
+<div class="platform-frame">
+<div class="platform-bar">
+<div class="platform-status"><span aria-hidden="true"></span><strong><span lang="zh-CN" class="locale">交互研究平台</span><span lang="en" class="locale">Interactive dashboard</span></strong></div>
+<a class="platform-link" href="https://tylerchn.github.io/BTH-Flood-Disaster-Resilience/" target="_blank" rel="noopener"><span lang="zh-CN" class="locale">在新窗口打开</span><span lang="en" class="locale">Open in a new tab</span> <span aria-hidden="true">↗</span></a>
+</div>
+<iframe class="project-frame" src="https://tylerchn.github.io/BTH-Flood-Disaster-Resilience/" loading="lazy" title="京津冀城市群洪涝韧性监测平台" data-en-title="Beijing–Tianjin–Hebei flood resilience dashboard" allowfullscreen></iframe>
+</div>
+<p class="platform-help"><span lang="zh-CN" class="locale">交互地图底图需要浏览器支持 WebGL。</span><span lang="en" class="locale">The interactive basemap requires browser support for WebGL.</span></p>
+<div class="platform-notes">
+<div><span class="mono">01</span> <span lang="zh-CN" class="locale">韧性基线评估</span><span lang="en" class="locale">Resilience baseline</span></div>
+<div><span class="mono">02</span> <span lang="zh-CN" class="locale">洪涝风险诊断</span><span lang="en" class="locale">Flood risk diagnosis</span></div>
+<div><span class="mono">03</span> <span lang="zh-CN" class="locale">协同恢复模拟</span><span lang="en" class="locale">Coordinated recovery simulation</span></div>
+</div>
+</div></section>
 <section class="section" id="research"><div class="wrap">
-<div class="section-head"><div><p class="label mono">01 / <span lang="zh-CN" class="locale">研究方向</span><span lang="en" class="locale">Research</span></p><h2><span lang="zh-CN" class="locale">研究方向</span><span lang="en" class="locale">Research themes</span></h2></div><p><span lang="zh-CN" class="locale">从城市群、交通网络到街道，探索空间数据如何支持规划决策。</span><span lang="en" class="locale">From urban regions and transport networks to individual streets, I use spatial data to inform planning decisions.</span></p></div>
+<div class="section-head"><div><p class="label mono">02 / <span lang="zh-CN" class="locale">研究方向</span><span lang="en" class="locale">Research</span></p><h2><span lang="zh-CN" class="locale">研究方向</span><span lang="en" class="locale">Research themes</span></h2></div><p><span lang="zh-CN" class="locale">从城市群、交通网络到街道，探索空间数据如何支持规划决策。</span><span lang="en" class="locale">From urban regions and transport networks to individual streets, I use spatial data to inform planning decisions.</span></p></div>
 <div class="research-layout">
 <div class="research-nav" role="group" aria-label="研究主题" data-en-label="Research themes" hidden>
 <button type="button" data-topic="resilience" aria-pressed="true" aria-controls="project-resilience"><span>01</span><span lang="zh-CN" class="locale">城市与区域韧性</span><span lang="en" class="locale">Urban &amp; regional resilience</span><span aria-hidden="true">↗</span></button>
@@ -219,29 +255,51 @@ html .hero h1,html[lang=en] .hero h1{font-size:29pt;line-height:1.05;max-width:n
 <article class="project" id="project-geoai" data-topic="geoai"><p class="mono">03 / Street</p><h3><span lang="zh-CN" class="locale">街景计算与城市感知</span><span lang="en" class="locale">Street-view analytics and urban perception</span></h3><p><span lang="zh-CN" class="locale">用街景影像、遥感指标和可解释建模量化街道环境，并将分析结果用于街道空间评估和更新研究。</span><span lang="en" class="locale">I combine street-view imagery, satellite-derived indicators, and interpretable models to assess street environments and study their regeneration.</span></p><a href="https://doi.org/10.3390/rs16193661"><span lang="zh-CN" class="locale">阅读街景分析论文</span><span lang="en" class="locale">Read the street-view paper</span> ↗</a></article>
 </div></div></div></section>
 <section class="section publications" id="publications"><div class="wrap">
-<div class="section-head"><div><p class="label mono">02 / <span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></p><h2><span lang="zh-CN" class="locale">代表性学术成果</span><span lang="en" class="locale">Selected publications</span></h2></div><p><span lang="zh-CN" class="locale">可按研究主题和年份筛选，也可以搜索题名、期刊或 DOI。</span><span lang="en" class="locale">Filter by topic and year, or search by title, journal, or DOI.</span></p></div>
+<div class="section-head"><div><p class="label mono">03 / <span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></p><h2><span lang="zh-CN" class="locale">学术成果</span><span lang="en" class="locale">Publications</span></h2></div><p><span lang="zh-CN" class="locale">期刊论文、会议论文与报告按年份倒序排列。可按年份筛选，或搜索题名、期刊和 DOI。</span><span lang="en" class="locale">Journal articles, conference papers, and reports in reverse chronological order. Filter by year or search titles, venues, and DOIs.</span></p></div>
 <div class="filters" hidden>
-<div class="filter-row" role="group" aria-label="按研究主题筛选" data-en-label="Filter by research topic"><button type="button" data-filter="all" aria-pressed="true"><span lang="zh-CN" class="locale">全部</span><span lang="en" class="locale">All</span></button><button type="button" data-filter="resilience" aria-pressed="false"><span lang="zh-CN" class="locale">韧性</span><span lang="en" class="locale">Resilience</span></button><button type="button" data-filter="mobility" aria-pressed="false"><span lang="zh-CN" class="locale">出行</span><span lang="en" class="locale">Mobility</span></button><button type="button" data-filter="geoai" aria-pressed="false">GeoAI</button><output aria-live="polite"></output></div>
-<div class="filter-row"><label><span lang="zh-CN" class="locale">检索论文</span><span lang="en" class="locale">Search publications</span><input id="query" type="search" placeholder="例如：洪涝、Urban Climate" data-en-placeholder="e.g. flood, Urban Climate"></label><label><span lang="zh-CN" class="locale">发表年份</span><span lang="en" class="locale">Publication year</span><select id="year"><option value="all" data-en="All years">全部年份</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select></label></div>
+<div class="filter-row">
+<label><span lang="zh-CN" class="locale">检索成果</span><span lang="en" class="locale">Search publications</span><input id="query" type="search" placeholder="例如 Urban Climate、flood 或 DOI" data-en-placeholder="e.g. Urban Climate, flood, or a DOI"></label>
+<label><span lang="zh-CN" class="locale">发表年份</span><span lang="en" class="locale">Publication year</span><select id="year"><option value="all" data-en="All years">全部年份</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option></select></label>
 </div>
-<ul class="paper-list">
-<li class="paper" data-topic="mobility" data-search="街道差异与出行差异：共享出行背后的作用机制 unequal streets, unequal journeys: the hidden mechanisms of shared mobility travel behaviour and society https://doi.org/10.1016/j.tbs.2026.101284 第一作者 first author"><time datetime="2026">2026</time><div><h3><span lang="zh-CN" class="locale">街道差异与出行差异：共享出行背后的作用机制</span><span lang="en" class="locale">Unequal streets, unequal journeys: The hidden mechanisms of shared mobility</span></h3><p>Travel Behaviour and Society · <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a href="https://doi.org/10.1016/j.tbs.2026.101284" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="resilience" data-search="极端降雨下城市洪涝韧性评价的多源地理空间框架：重庆案例 a multi-source geospatial framework for the evaluation of urban flood resilience under extreme rainfall: evidence from chongqing, china water https://doi.org/10.3390/w18091067 合作者 co-author"><time datetime="2026">2026</time><div><h3><span lang="zh-CN" class="locale">极端降雨下城市洪涝韧性评价的多源地理空间框架：重庆案例</span><span lang="en" class="locale">A Multi-Source Geospatial Framework for the Evaluation of Urban Flood Resilience Under Extreme Rainfall: Evidence from Chongqing, China</span></h3><p>Water · <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a href="https://doi.org/10.3390/w18091067" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="geoai" data-search="融合街景影像和卫星环境指标的街景质量可解释评估：天津案例 interpretable assessment of streetscape quality using street-view imagery and satellite-derived environmental indicators: evidence from tianjin, china buildings https://doi.org/10.3390/buildings16010001 合作者 co-author"><time datetime="2026">2026</time><div><h3><span lang="zh-CN" class="locale">融合街景影像和卫星环境指标的街景质量可解释评估：天津案例</span><span lang="en" class="locale">Interpretable Assessment of Streetscape Quality Using Street-View Imagery and Satellite-Derived Environmental Indicators: Evidence from Tianjin, China</span></h3><p>Buildings · <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a href="https://doi.org/10.3390/buildings16010001" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="resilience geoai" data-search="基于深度学习的京津冀城市群生态韧性时空演变与驱动机制 decoding the spatiotemporal dynamics and driving mechanisms of ecological resilience in the beijing-tianjin-hebei urban agglomeration: a deep learning approach urban climate https://doi.org/10.1016/j.uclim.2025.102436 第一作者 first author"><time datetime="2025">2025</time><div><h3><span lang="zh-CN" class="locale">基于深度学习的京津冀城市群生态韧性时空演变与驱动机制</span><span lang="en" class="locale">Decoding the spatiotemporal dynamics and driving mechanisms of ecological resilience in the Beijing-Tianjin-Hebei urban agglomeration: A deep learning approach</span></h3><p>Urban Climate · <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a href="https://doi.org/10.1016/j.uclim.2025.102436" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="mobility geoai" data-search="城市感知与地铁站 15 分钟可达范围内共享单车公平性的关系：深圳案例 the relationship between urban perceptions and bike-sharing equity in 15-minute metro station catchments: a shenzhen case study buildings https://doi.org/10.3390/buildings15213874 第一作者 first author"><time datetime="2025">2025</time><div><h3><span lang="zh-CN" class="locale">城市感知与地铁站 15 分钟可达范围内共享单车公平性的关系：深圳案例</span><span lang="en" class="locale">The Relationship Between Urban Perceptions and Bike-Sharing Equity in 15-Minute Metro Station Catchments: A Shenzhen Case Study</span></h3><p>Buildings · <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a href="https://doi.org/10.3390/buildings15213874" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="mobility" data-search="地铁站域商业绅士化：主观感知与客观夜间灯光视角 commercial gentrification of metro catchment: lenses of subjective perception and objective nighttime light research in transportation business &amp; management https://doi.org/10.1016/j.rtbm.2025.101310 通讯作者 corresponding author"><time datetime="2025">2025</time><div><h3><span lang="zh-CN" class="locale">地铁站域商业绅士化：主观感知与客观夜间灯光视角</span><span lang="en" class="locale">Commercial gentrification of metro catchment: Lenses of subjective perception and objective nighttime light</span></h3><p>Research in Transportation Business &amp; Management · <span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding author</span></p></div><a href="https://doi.org/10.1016/j.rtbm.2025.101310" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="mobility" data-search="城市绿化结构对不同时段共享单车使用的影响 shaping greener mobility: impact of urban greening structure on time-dependent bike-sharing usage transportation research part d: transport and environment https://doi.org/10.1016/j.trd.2025.104657 合作者 co-author"><time datetime="2025">2025</time><div><h3><span lang="zh-CN" class="locale">城市绿化结构对不同时段共享单车使用的影响</span><span lang="en" class="locale">Shaping greener mobility: Impact of urban greening structure on time-dependent bike-sharing usage</span></h3><p>Transportation Research Part D: Transport and Environment · <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a href="https://doi.org/10.1016/j.trd.2025.104657" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="geoai" data-search="城市发展中恢复性感知的演变：时序街景影像与可解释机器学习 the evolution of restorative perception in urban development: insights from temporal street view images and explanatory machine learning international journal of urban sciences https://doi.org/10.1080/12265934.2025.2597889 合作者 co-author"><time datetime="2025">2025</time><div><h3><span lang="zh-CN" class="locale">城市发展中恢复性感知的演变：时序街景影像与可解释机器学习</span><span lang="en" class="locale">The evolution of restorative perception in urban development: Insights from temporal street view images and explanatory machine learning</span></h3><p>International Journal of Urban Sciences · <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a href="https://doi.org/10.1080/12265934.2025.2597889" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="geoai" data-search="基于街景视觉要素分析的城市感知评价与街道精细化治理 urban perception evaluation and street refinement governance supported by street view visual elements analysis remote sensing https://doi.org/10.3390/rs16193661 第一作者 first author"><time datetime="2024">2024</time><div><h3><span lang="zh-CN" class="locale">基于街景视觉要素分析的城市感知评价与街道精细化治理</span><span lang="en" class="locale">Urban Perception Evaluation and Street Refinement Governance Supported by Street View Visual Elements Analysis</span></h3><p>Remote Sensing · <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a href="https://doi.org/10.3390/rs16193661" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="mobility" data-search="社会与建成环境对共享单车使用不平等的影响：芝加哥 divvy 案例 the impact of the social-built environment on the inequity of bike-sharing use: a case study of divvy system in chicago travel behaviour and society https://doi.org/10.1016/j.tbs.2024.100873 通讯作者 corresponding author"><time datetime="2024">2024</time><div><h3><span lang="zh-CN" class="locale">社会与建成环境对共享单车使用不平等的影响：芝加哥 Divvy 案例</span><span lang="en" class="locale">The impact of the social-built environment on the inequity of bike-sharing use: A case study of Divvy system in Chicago</span></h3><p>Travel Behaviour and Society · <span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding author</span></p></div><a href="https://doi.org/10.1016/j.tbs.2024.100873" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="geoai" data-search="gis 在文化遗产保护中的应用趋势综述 emerging trends in gis application on cultural heritage conservation: a review heritage science https://doi.org/10.1186/s40494-024-01265-7 合作者 co-author"><time datetime="2024">2024</time><div><h3><span lang="zh-CN" class="locale">GIS 在文化遗产保护中的应用趋势综述</span><span lang="en" class="locale">Emerging trends in GIS application on cultural heritage conservation: a review</span></h3><p>Heritage Science · <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a href="https://doi.org/10.1186/s40494-024-01265-7" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
-<li class="paper" data-topic="geoai" data-search="基于街景大数据与深度学习的街道建筑色彩测度：天津解放北路案例 exploration of street space architectural color measurement based on street view big data and deep learning—a case study of jiefang north road street in tianjin plos one https://doi.org/10.1371/journal.pone.0289305 共同通讯作者 co-corresponding author"><time datetime="2023">2023</time><div><h3><span lang="zh-CN" class="locale">基于街景大数据与深度学习的街道建筑色彩测度：天津解放北路案例</span><span lang="en" class="locale">Exploration of street space architectural color measurement based on street view big data and deep learning—A case study of Jiefang North Road Street in Tianjin</span></h3><p>PLOS ONE · <span lang="zh-CN" class="locale">共同通讯作者</span><span lang="en" class="locale">Co-corresponding author</span></p></div><a href="https://doi.org/10.1371/journal.pone.0289305" lang="en" aria-label="打开 DOI" data-en-label="Open DOI">DOI ↗</a></li>
+<output id="publication-status" aria-live="polite"></output>
+</div>
+<ul class="paper-list" tabindex="-1" aria-label="学术成果列表" data-en-label="Publications list">
+<li class="paper" data-search="unequal streets, unequal journeys: the hidden mechanisms of shared mobility travel behaviour and society https://doi.org/10.1016/j.tbs.2026.101284 第一作者 first author 2026"><time datetime="2026">2026</time><div><h3 lang="en">Unequal streets, unequal journeys: The hidden mechanisms of shared mobility</h3><p><cite lang="en">Travel Behaviour and Society</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a class="doi" href="https://doi.org/10.1016/j.tbs.2026.101284" aria-label="DOI: Unequal streets, unequal journeys: The hidden mechanisms of shared mobility">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="a multi-source geospatial framework for the evaluation of urban flood resilience under extreme rainfall: evidence from chongqing, china water https://doi.org/10.3390/w18091067 合作者 co-author 2026"><time datetime="2026">2026</time><div><h3 lang="en">A Multi-Source Geospatial Framework for the Evaluation of Urban Flood Resilience Under Extreme Rainfall: Evidence from Chongqing, China</h3><p><cite lang="en">Water</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/w18091067" aria-label="DOI: A Multi-Source Geospatial Framework for the Evaluation of Urban Flood Resilience Under Extreme Rainfall: Evidence from Chongqing, China">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="interpretable assessment of streetscape quality using street-view imagery and satellite-derived environmental indicators: evidence from tianjin, china buildings https://doi.org/10.3390/buildings16010001 合作者 co-author 2026"><time datetime="2026">2026</time><div><h3 lang="en">Interpretable Assessment of Streetscape Quality Using Street-View Imagery and Satellite-Derived Environmental Indicators: Evidence from Tianjin, China</h3><p><cite lang="en">Buildings</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/buildings16010001" aria-label="DOI: Interpretable Assessment of Streetscape Quality Using Street-View Imagery and Satellite-Derived Environmental Indicators: Evidence from Tianjin, China">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="站域共享单车使用公平性研究——以深圳地铁为例 都市快轨交通 https://doi.org/10.3969/j.issn.1672-6073.2026.03.004 通讯作者 corresponding author 2026"><time datetime="2026">2026</time><div><h3 lang="zh-CN">站域共享单车使用公平性研究——以深圳地铁为例</h3><p><cite lang="zh-CN">都市快轨交通</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding author</span></p></div><a class="doi" href="https://doi.org/10.3969/j.issn.1672-6073.2026.03.004" aria-label="DOI: 站域共享单车使用公平性研究——以深圳地铁为例">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="decoding the spatiotemporal dynamics and driving mechanisms of ecological resilience in the beijing-tianjin-hebei urban agglomeration: a deep learning approach urban climate https://doi.org/10.1016/j.uclim.2025.102436 第一作者 first author 2025"><time datetime="2025">2025</time><div><h3 lang="en">Decoding the spatiotemporal dynamics and driving mechanisms of ecological resilience in the Beijing-Tianjin-Hebei urban agglomeration: A deep learning approach</h3><p><cite lang="en">Urban Climate</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a class="doi" href="https://doi.org/10.1016/j.uclim.2025.102436" aria-label="DOI: Decoding the spatiotemporal dynamics and driving mechanisms of ecological resilience in the Beijing-Tianjin-Hebei urban agglomeration: A deep learning approach">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="the relationship between urban perceptions and bike-sharing equity in 15-minute metro station catchments: a shenzhen case study buildings https://doi.org/10.3390/buildings15213874 第一作者 first author 2025"><time datetime="2025">2025</time><div><h3 lang="en">The Relationship Between Urban Perceptions and Bike-Sharing Equity in 15-Minute Metro Station Catchments: A Shenzhen Case Study</h3><p><cite lang="en">Buildings</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a class="doi" href="https://doi.org/10.3390/buildings15213874" aria-label="DOI: The Relationship Between Urban Perceptions and Bike-Sharing Equity in 15-Minute Metro Station Catchments: A Shenzhen Case Study">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="commercial gentrification of metro catchment: lenses of subjective perception and objective nighttime light research in transportation business &amp; management https://doi.org/10.1016/j.rtbm.2025.101310 通讯作者 corresponding author 2025"><time datetime="2025">2025</time><div><h3 lang="en">Commercial gentrification of metro catchment: Lenses of subjective perception and objective nighttime light</h3><p><cite lang="en">Research in Transportation Business &amp; Management</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding author</span></p></div><a class="doi" href="https://doi.org/10.1016/j.rtbm.2025.101310" aria-label="DOI: Commercial gentrification of metro catchment: Lenses of subjective perception and objective nighttime light">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="shaping greener mobility: impact of urban greening structure on time-dependent bike-sharing usage transportation research part d: transport and environment https://doi.org/10.1016/j.trd.2025.104657 合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="en">Shaping greener mobility: Impact of urban greening structure on time-dependent bike-sharing usage</h3><p><cite lang="en">Transportation Research Part D: Transport and Environment</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.1016/j.trd.2025.104657" aria-label="DOI: Shaping greener mobility: Impact of urban greening structure on time-dependent bike-sharing usage">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="the evolution of restorative perception in urban development: insights from temporal street view images and explanatory machine learning international journal of urban sciences https://doi.org/10.1080/12265934.2025.2597889 合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="en">The evolution of restorative perception in urban development: Insights from temporal street view images and explanatory machine learning</h3><p><cite lang="en">International Journal of Urban Sciences</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.1080/12265934.2025.2597889" aria-label="DOI: The evolution of restorative perception in urban development: Insights from temporal street view images and explanatory machine learning">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="outdoor thermal comfort research and its implications for landscape architecture: a systematic review sustainability https://doi.org/10.3390/su17052330 合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="en">Outdoor Thermal Comfort Research and Its Implications for Landscape Architecture: A Systematic Review</h3><p><cite lang="en">Sustainability</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/su17052330" aria-label="DOI: Outdoor Thermal Comfort Research and Its Implications for Landscape Architecture: A Systematic Review">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="a supply–demand-driven framework for evaluating service effectiveness of university campus emergency shelter: evidence from central tianjin under earthquake scenarios land https://doi.org/10.3390/land14071411 合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="en">A Supply–Demand-Driven Framework for Evaluating Service Effectiveness of University Campus Emergency Shelter: Evidence from Central Tianjin Under Earthquake Scenarios</h3><p><cite lang="en">Land</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/land14071411" aria-label="DOI: A Supply–Demand-Driven Framework for Evaluating Service Effectiveness of University Campus Emergency Shelter: Evidence from Central Tianjin Under Earthquake Scenarios">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="multi-scale analysis of motivational mechanisms in rural tourism behavior frontiers of architectural research https://doi.org/10.1016/j.foar.2025.06.003 合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="en">Multi-scale analysis of motivational mechanisms in rural tourism behavior</h3><p><cite lang="en">Frontiers of Architectural Research</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.1016/j.foar.2025.06.003" aria-label="DOI: Multi-scale analysis of motivational mechanisms in rural tourism behavior">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="城乡融合视角下大都市区乡村适地化发展路径 城市发展研究  合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="zh-CN">城乡融合视角下大都市区乡村适地化发展路径</h3><p><cite lang="zh-CN">城市发展研究</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div></li>
+<li class="paper" data-search="基于社区韧性的英国乡村发展规划政策解读 西安建筑科技大学学报（自然科学版）  合作者 co-author 2025"><time datetime="2025">2025</time><div><h3 lang="zh-CN">基于社区韧性的英国乡村发展规划政策解读</h3><p><cite lang="zh-CN">西安建筑科技大学学报（自然科学版）</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div></li>
+<li class="paper" data-search="urban perception evaluation and street refinement governance supported by street view visual elements analysis remote sensing https://doi.org/10.3390/rs16193661 第一作者 first author 2024"><time datetime="2024">2024</time><div><h3 lang="en">Urban Perception Evaluation and Street Refinement Governance Supported by Street View Visual Elements Analysis</h3><p><cite lang="en">Remote Sensing</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span></p></div><a class="doi" href="https://doi.org/10.3390/rs16193661" aria-label="DOI: Urban Perception Evaluation and Street Refinement Governance Supported by Street View Visual Elements Analysis">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="the impact of the social-built environment on the inequity of bike-sharing use: a case study of divvy system in chicago travel behaviour and society https://doi.org/10.1016/j.tbs.2024.100873 通讯作者 corresponding author 2024"><time datetime="2024">2024</time><div><h3 lang="en">The impact of the social-built environment on the inequity of bike-sharing use: A case study of Divvy system in Chicago</h3><p><cite lang="en">Travel Behaviour and Society</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">通讯作者</span><span lang="en" class="locale">Corresponding author</span></p></div><a class="doi" href="https://doi.org/10.1016/j.tbs.2024.100873" aria-label="DOI: The impact of the social-built environment on the inequity of bike-sharing use: A case study of Divvy system in Chicago">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="emerging trends in gis application on cultural heritage conservation: a review heritage science https://doi.org/10.1186/s40494-024-01265-7 合作者 co-author 2024"><time datetime="2024">2024</time><div><h3 lang="en">Emerging trends in GIS application on cultural heritage conservation: a review</h3><p><cite lang="en">Heritage Science</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.1186/s40494-024-01265-7" aria-label="DOI: Emerging trends in GIS application on cultural heritage conservation: a review">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="integration between dockless bike-sharing and buses: the effect of urban road network characteristics land https://doi.org/10.3390/land13081209 合作者 co-author 2024"><time datetime="2024">2024</time><div><h3 lang="en">Integration between Dockless Bike-Sharing and Buses: The Effect of Urban Road Network Characteristics</h3><p><cite lang="en">Land</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/land13081209" aria-label="DOI: Integration between Dockless Bike-Sharing and Buses: The Effect of Urban Road Network Characteristics">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="evaluation of the impact of courtyard layout on wind effects on coastal traditional settlements land https://doi.org/10.3390/land13111813 合作者 co-author 2024"><time datetime="2024">2024</time><div><h3 lang="en">Evaluation of the Impact of Courtyard Layout on Wind Effects on Coastal Traditional Settlements</h3><p><cite lang="en">Land</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/land13111813" aria-label="DOI: Evaluation of the Impact of Courtyard Layout on Wind Effects on Coastal Traditional Settlements">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="the spatiotemporal evolution of rural landscape patterns in chinese metropolises under rapid urbanization plos one https://doi.org/10.1371/journal.pone.0301754 合作者 co-author 2024"><time datetime="2024">2024</time><div><h3 lang="en">The spatiotemporal evolution of rural landscape patterns in Chinese metropolises under rapid urbanization</h3><p><cite lang="en">PLOS ONE</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.1371/journal.pone.0301754" aria-label="DOI: The spatiotemporal evolution of rural landscape patterns in Chinese metropolises under rapid urbanization">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="exploring the built environment factors influencing town image using social media data and deep learning methods land https://doi.org/10.3390/land13030291 合作者 co-author 2024"><time datetime="2024">2024</time><div><h3 lang="en">Exploring the Built Environment Factors Influencing Town Image Using Social Media Data and Deep Learning Methods</h3><p><cite lang="en">Land</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.3390/land13030291" aria-label="DOI: Exploring the Built Environment Factors Influencing Town Image Using Social Media Data and Deep Learning Methods">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="exploration of street space architectural color measurement based on street view big data and deep learning—a case study of jiefang north road street in tianjin plos one https://doi.org/10.1371/journal.pone.0289305 共同通讯作者 co-corresponding author 2023"><time datetime="2023">2023</time><div><h3 lang="en">Exploration of street space architectural color measurement based on street view big data and deep learning—A case study of Jiefang North Road Street in Tianjin</h3><p><cite lang="en">PLOS ONE</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">共同通讯作者</span><span lang="en" class="locale">Co-corresponding author</span></p></div><a class="doi" href="https://doi.org/10.1371/journal.pone.0289305" aria-label="DOI: Exploration of street space architectural color measurement based on street view big data and deep learning—A case study of Jiefang North Road Street in Tianjin">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="simulation of urban non-motorized traffic: a agent-based modeling approach based on big data of bike sharing and social force model transactions in urban data, science, and technology https://doi.org/10.1177/27541231231180989 合作者 co-author 2023"><time datetime="2023">2023</time><div><h3 lang="en">Simulation of urban non-motorized traffic: A agent-based modeling approach based on big data of bike sharing and social force model</h3><p><cite lang="en">Transactions in Urban Data, Science, and Technology</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span></p></div><a class="doi" href="https://doi.org/10.1177/27541231231180989" aria-label="DOI: Simulation of urban non-motorized traffic: A agent-based modeling approach based on big data of bike sharing and social force model">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="多元数据支持下的“社区体检”方法探究及应用——以天津市某地区为例 2022 中国城市规划年会论文集 https://doi.org/10.26914/c.cnkihy.2023.048658 第一作者 first author 2023"><time datetime="2023">2023</time><div><h3 lang="zh-CN">多元数据支持下的“社区体检”方法探究及应用——以天津市某地区为例</h3><p><cite lang="zh-CN">2022 中国城市规划年会论文集</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span> <span class="pub-kind"><span lang="zh-CN" class="locale">会议论文</span><span lang="en" class="locale">Conference paper</span></span></p></div><a class="doi" href="https://doi.org/10.26914/c.cnkihy.2023.048658" aria-label="DOI: 多元数据支持下的“社区体检”方法探究及应用——以天津市某地区为例">DOI <span aria-hidden="true">↗</span></a></li>
+<li class="paper" data-search="a critical and on-going review on the chinese eco-cities: based on the cases of dongtan eco-city, caofeidian eco-city and china-singapore tianjin eco-city the 16th iacp annual conference  第一作者 first author 2022"><time datetime="2022">2022</time><div><h3 lang="en">A Critical and On-going Review on the Chinese Eco-cities: Based on the Cases of Dongtan Eco-City, Caofeidian Eco-City and China-Singapore Tianjin Eco-City</h3><p><cite lang="en">The 16th IACP Annual Conference</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">第一作者</span><span lang="en" class="locale">First author</span> <span class="pub-kind"><span lang="zh-CN" class="locale">会议论文</span><span lang="en" class="locale">Conference paper</span></span></p></div></li>
+<li class="paper" data-search="京津冀韧性社区建设发展报告 中国城市社区建设与发展报告（2022）  合作者 co-author 2022"><time datetime="2022">2022</time><div><h3 lang="zh-CN">京津冀韧性社区建设发展报告</h3><p><cite lang="zh-CN">中国城市社区建设与发展报告（2022）</cite> <span aria-hidden="true">·</span> <span lang="zh-CN" class="locale">合作者</span><span lang="en" class="locale">Co-author</span> <span class="pub-kind"><span lang="zh-CN" class="locale">蓝皮书报告</span><span lang="en" class="locale">Blue book chapter</span></span></p></div></li>
 </ul>
-<p class="empty" hidden><span lang="zh-CN" class="locale">没有找到匹配的论文。可以更换关键词或放宽筛选条件。</span><span lang="en" class="locale">No publications match these filters. Try another keyword or broaden your filters.</span></p>
+<p class="empty" hidden><span lang="zh-CN" class="locale">没有找到匹配的成果。试试其他关键词或年份。</span><span lang="en" class="locale">No publications match. Try a different search or year.</span></p>
+<nav class="pagination" aria-label="成果分页" data-en-label="Publications pagination" hidden>
+<button type="button" data-direction="-1">‹ <span lang="zh-CN" class="locale">上一页</span><span lang="en" class="locale">Previous</span></button>
+<span class="page-numbers"></span>
+<button type="button" data-direction="1"><span lang="zh-CN" class="locale">下一页</span><span lang="en" class="locale">Next</span> ›</button>
+</nav>
 </div></section>
 <section class="section cv" id="cv"><div class="wrap">
-<div class="section-head"><div><p class="label mono">03 / <span lang="zh-CN" class="locale">学术简历</span><span lang="en" class="locale">Academic CV</span></p><h2><span lang="zh-CN" class="locale">学术简历</span><span lang="en" class="locale">Academic CV</span></h2></div><p><span lang="zh-CN" class="locale">展开教育时间轴，查看各阶段的学习方向。</span><span lang="en" class="locale">Expand the education timeline to see each stage of study.</span></p></div>
+<div class="section-head"><div><p class="label mono">04 / <span lang="zh-CN" class="locale">学术简历</span><span lang="en" class="locale">Academic CV</span></p><h2><span lang="zh-CN" class="locale">学术简历</span><span lang="en" class="locale">Academic CV</span></h2></div><p><span lang="zh-CN" class="locale">展开教育时间轴，查看各阶段的学习方向。</span><span lang="en" class="locale">Expand the education timeline to see each stage of study.</span></p></div>
 <div class="cv-grid">
 <div><h3><span lang="zh-CN" class="locale">教育经历</span><span lang="en" class="locale">Education</span></h3><ol class="timeline">
 <li><details open><summary><time class="mono" datetime="2021-09"><span lang="zh-CN" class="locale">2021 年起</span><span lang="en" class="locale">Since 2021</span></time><span lang="zh-CN" class="locale">天津大学</span><span lang="en" class="locale">Tianjin University</span></summary><p><span lang="zh-CN" class="locale">建筑学院城乡规划系，资源与环境工程博士阶段研究。</span><span lang="en" class="locale">Doctoral research in Resources and Environment, School of Architecture.</span></p></details></li>
@@ -270,7 +328,11 @@ const atlasControls = document.querySelector('.atlas-controls');
 const topicButtons = [...document.querySelectorAll('button[data-topic]')];
 const projects = [...document.querySelectorAll('.project')];
 const filters = document.querySelector('.filters');
-const filterButtons = [...filters.querySelectorAll('[data-filter]')];
+const publicationList = document.querySelector('.paper-list');
+const pagination = document.querySelector('.pagination');
+const pageNumbers = pagination.querySelector('.page-numbers');
+const previous = pagination.querySelector('[data-direction="-1"]');
+const next = pagination.querySelector('[data-direction="1"]');
 const papers = [...document.querySelectorAll('.paper')];
 const query = document.querySelector('#query');
 const year = document.querySelector('#year');
@@ -286,7 +348,9 @@ const captions = {
 };
 const topics = Object.keys(captions);
 let topic = 'resilience';
-let filter = 'all';
+const pageSize = 9;
+let page = 1;
+let totalPages = 1;
 
 function displayTopic(next, animate = false) {
   if (!topics.includes(next)) return;
@@ -306,38 +370,65 @@ function displayTopic(next, animate = false) {
   }
 }
 
-function filterPapers() {
-  const term = query.value.trim().toLocaleLowerCase();
-  let count = 0;
-  for (const paper of papers) {
-    const topicMatch = filter === 'all' || paper.dataset.topic.split(' ').includes(filter);
-    const yearMatch = year.value === 'all' || paper.querySelector('time').dateTime === year.value;
-    const queryMatch = !term || paper.dataset.search.includes(term);
-    paper.hidden = !(topicMatch && yearMatch && queryMatch);
-    if (!paper.hidden) count++;
-  }
-  result.value = root.lang === 'en' ? count + (count === 1 ? ' publication' : ' publications') : '共 ' + count + ' 篇';
+const numberButtons = Array.from({length: Math.ceil(papers.length / pageSize)}, (_, index) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.dataset.page = index + 1;
+  button.textContent = index + 1;
+  pageNumbers.append(button);
+  return button;
+});
+function showPublications() {
+  const term = query.value.trim().toLowerCase();
+  const matching = papers.filter(paper =>
+    (year.value === 'all' || paper.querySelector('time').dateTime === year.value) &&
+    (!term || paper.dataset.search.includes(term))
+  );
+  const count = matching.length;
+  totalPages = Math.max(1, Math.ceil(count / pageSize));
+  page = Math.min(page, totalPages);
+  const offset = (page - 1) * pageSize;
+  const visible = new Set(matching.slice(offset, offset + pageSize));
+  for (const paper of papers) paper.hidden = !visible.has(paper);
+  const en = root.lang === 'en';
+  const range = (offset + 1) + '–' + Math.min(offset + pageSize, count);
+  result.value = en ? (count ? range + ' of ' + count + ' results' : '0 results') :
+    (count ? '显示 ' + range + ' 条，共 ' + count + ' 条' : '共 0 条');
   empty.hidden = count > 0;
+  pagination.hidden = totalPages <= 1;
+  previous.disabled = page === 1;
+  next.disabled = page === totalPages;
+  for (const button of numberButtons) {
+    const number = Number(button.dataset.page);
+    button.hidden = number > totalPages;
+    button.setAttribute('aria-label', en ? 'Page ' + number : '第 ' + number + ' 页');
+    if (number === page) button.setAttribute('aria-current', 'page');
+    else button.removeAttribute('aria-current');
+  }
 }
 
-const translated = [...document.querySelectorAll('[data-en-label],[data-en-placeholder],[data-en]')].map(element => ({
-  element,
-  zh: element.dataset.enLabel !== undefined ? element.getAttribute('aria-label') :
-      element.dataset.enPlaceholder !== undefined ? element.getAttribute('placeholder') : element.textContent
-}));
+const translated = [...document.querySelectorAll('[data-en-label],[data-en-placeholder],[data-en-title],[data-en]')].map(element => {
+  const attributes = {enLabel:'aria-label', enPlaceholder:'placeholder', enTitle:'title'};
+  const key = Object.keys(attributes).find(key => element.dataset[key] !== undefined);
+  const attribute = attributes[key];
+  return {
+    element, attribute,
+    zh: attribute ? element.getAttribute(attribute) : element.textContent,
+    en: element.dataset[key || 'en']
+  };
+});
 function applyLanguage() {
   const isEnglish = new URL(location.href).searchParams.get('lang') === 'en';
   root.lang = isEnglish ? 'en' : 'zh-CN';
   document.title = isEnglish ? 'Fengliang Tang | Urban Resilience & GeoAI' : '唐缝梁｜城市韧性与 GeoAI';
   description.content = isEnglish ? 'Fengliang Tang’s academic homepage for urban resilience, mobility equity and geospatial AI.' :
     '唐缝梁的学术主页。研究方向包括城市群韧性、交通公平与地理空间人工智能。';
-  for (const {element, zh} of translated) {
-    if (element.dataset.enLabel !== undefined) element.setAttribute('aria-label', isEnglish ? element.dataset.enLabel : zh);
-    else if (element.dataset.enPlaceholder !== undefined) element.setAttribute('placeholder', isEnglish ? element.dataset.enPlaceholder : zh);
-    else element.textContent = isEnglish ? element.dataset.en : zh;
+  for (const {element, attribute, zh, en} of translated) {
+    if (attribute) element.setAttribute(attribute, isEnglish ? en : zh);
+    else element.textContent = isEnglish ? en : zh;
   }
   displayTopic(topic);
-  filterPapers();
+  showPublications();
 }
 function showHashTopic() {
   const match = location.hash.match(/^#project-(resilience|mobility|geoai)$/);
@@ -357,15 +448,22 @@ window.addEventListener('popstate', applyLanguage);
 window.addEventListener('hashchange', showHashTopic);
 for (const button of topicButtons) button.addEventListener('click', () => displayTopic(button.dataset.topic, true));
 for (const link of document.querySelectorAll('[data-jump]')) link.addEventListener('click', () => displayTopic(link.dataset.jump, true));
-for (const button of filterButtons) {
-  button.addEventListener('click', () => {
-    filter = button.dataset.filter;
-    for (const item of filterButtons) item.setAttribute('aria-pressed', String(item === button));
-    filterPapers();
-  });
+pagination.addEventListener('click', event => {
+  const button = event.target.closest('button');
+  if (!button) return;
+  const target = button.dataset.page ? Number(button.dataset.page) : page + Number(button.dataset.direction);
+  if (target === page || target < 1 || target > totalPages) return;
+  page = target;
+  showPublications();
+  publicationList.focus({preventScroll:true});
+  publicationList.scrollIntoView({block:'start'});
+});
+function resetPublicationPage() {
+  page = 1;
+  showPublications();
 }
-query.addEventListener('input', filterPapers);
-year.addEventListener('change', filterPapers);
+query.addEventListener('input', resetPublicationPage);
+year.addEventListener('change', resetPublicationPage);
 printButton.addEventListener('click', () => window.print());
 let closedDetails = [];
 window.addEventListener('beforeprint', () => {
